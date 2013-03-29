@@ -1,0 +1,9 @@
+{
+    "_id": "/todo",
+    "fields": [
+        {
+            "field": "title",
+            "type": "/string"
+        }
+    ]
+}
