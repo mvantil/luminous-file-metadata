@@ -1,0 +1,10 @@
+{
+    "_id": "/baseType/subType",
+    "inherits": "/baseType",
+    "fields": [
+        {
+            "field": "subField",
+            "type": "/string"
+        }
+    ]
+}

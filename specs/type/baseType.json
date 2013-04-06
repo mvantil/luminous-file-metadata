@@ -1,5 +1,5 @@
 {
-    "_id": "/todo",
+    "_id": "/baseType",
     "fields": [
         {
             "field": "title",

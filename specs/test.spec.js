@@ -1,5 +1,6 @@
 var Metadata = require('../lib/luminous-file-metadata'),
     Luminous = require('luminous-base'),
+    _ = require('underscore'),
     Config = Luminous.Config;
 
 describe("Luminous File Metadata suite", function() {
@@ -36,12 +37,35 @@ describe("Luminous File Metadata suite", function() {
             expect(err).toBeFalsy();
             metadata.list(function(err, types) {
                 expect(err).toBeFalsy();
-                var todoTypeResult = types.reduceRight(function(prev, cur) {
-                    return cur._id == todoType._id ? cur : null;
-                });
+                
+                var todoTypeResult = _.chain(types)
+                .filter(function(item) {
+                    return item._id == todoType._id;
+                })
+                .first()
+                .value();
+
                 expect(todoTypeResult).toEqual(todoType);
                 done();
             });
         });
     }, 1000);
+
+    it("must wrap sub types into base type", function(done) {
+        metadata.list(function(err, types) {
+            expect(err).toBeFalsy();
+
+            var baseType = _.chain(types)
+            .filter(function(item) {
+                return item._id == '/baseType';
+            })
+            .first()
+            .value();
+
+            console.log('baseType: ', baseType);
+            expect(baseType.subTypes).toBeTruthy();
+
+            done();
+        });
+    });
 });
