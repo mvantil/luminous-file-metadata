@@ -62,9 +62,17 @@ describe("Luminous File Metadata suite", function() {
             .first()
             .value();
 
-            console.log('baseType: ', baseType);
             expect(baseType.subTypes).toBeTruthy();
 
+            done();
+        });
+    });
+
+    it("must be able to retrieve sub types", function(done) {
+        metadata.load('/baseType/subType', function(err, item) {
+            expect(err).toBeFalsy();
+
+            expect(item._id).toBe('/baseType/subType');
             done();
         });
     });
