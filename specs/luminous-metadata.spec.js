@@ -1,10 +1,9 @@
-var Metadata = require('../lib/luminous-file-metadata'),
-    Luminous = require('luminous-base'),
-    _ = require('underscore'),
-    Config = Luminous.Config;
+var _ = require('underscore'),
+    Luminous = require('Luminous');
+var luminous = new Luminous();
 
 describe("Luminous File Metadata suite", function() {
-    var metadata = new Metadata();
+    var metadata = luminous.metadata;
 
     var todoType = {
         _id: '/todo',

@@ -1,7 +1,7 @@
 {
     "mongoConnection": "mongodb://localhost:27017/luminousTestDb",
     "modules": {
-        "metadata": "luminous-file-metadata"
+        "metadata": "../../../lib/luminous-file-metadata"
     },
     "metadata": {
         "path": "specs/type"

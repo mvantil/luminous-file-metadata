@@ -1,16 +1,9 @@
 {
     "_id": "/todo",
-    "fields": [{
-    	"display": "Title",
-        "field": "title",
-        "type": "/string"
-    }, {
-    	"display": "Notes",
-    	"field": "notes",
-    	"type": "/string"
-	}, {
-		"display": "Due Date",
-		"field": "dueDate",
-		"type": "/date"
-	}]
+    "fields": [
+        {
+            "field": "title",
+            "type": "/string"
+        }
+    ]
 }
