@@ -7,7 +7,8 @@
     "async": "~0.2.6",
     "luminous-base": "~0.0.2",
     "luminous-server-config": "~0.0.2",
-    "underscore": "~1.4.4"
+    "underscore": "~1.4.4",
+    "futureeventemitter": "*"
   },
   "devDependencies": {
     "jasmine-node": "~1.3.0",
